@@ -3,45 +3,94 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="?actionBarSize"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="20dp">
 
-    <MultiAutoCompleteTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/nameTv"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/usernameTv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/usernameTv"
-        tools:text="Jeremy Black"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="1. Jeremy Black"
+        app:layout_constraintVertical_chainStyle="packed"/>
 
-    <MultiAutoCompleteTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/usernameTv"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/nameTv"
-        app:layout_constraintEnd_toStartOf="@id/emailTv"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/nameTv"
+        app:layout_constraintBottom_toTopOf="@id/emailTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:text="jblack"/>
 
-    <MultiAutoCompleteTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/emailTv"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/usernameTv"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/usernameTv"
+        app:layout_constraintBottom_toTopOf="@id/addressTv"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="my@email.com"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/addressTv"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/emailTv"
+        app:layout_constraintBottom_toTopOf="@id/phoneTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="123 Abc St"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phoneTv"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/addressTv"
+        app:layout_constraintBottom_toTopOf="@id/companyTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="111-222-3333"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/companyTv"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/phoneTv"
+        app:layout_constraintBottom_toTopOf="@id/websiteTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="ABC Inc"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/websiteTv"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/companyTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="http://www.somesite.com"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

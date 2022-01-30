@@ -31,9 +31,13 @@ class UserAdapter(
         @SuppressLint("SetTextI18n")
         fun bind(user: User) {
                 with(binding){
-                    nameTv.setText(user.name)
+                    nameTv.setText("${user.id} ${user.name}")
                     emailTv.setText(user.email)
                     usernameTv.setText(user.username)
+                    addressTv.setText("${user.address.street} ${user.address.suite} ${user.address.city} ${user.address.zipcode} ${user.address.geo.lat} ${user.address.geo.lng}")
+                    phoneTv.setText(user.phone)
+                    companyTv.setText("${user.company.name} ${user.company.catchPhrase} ${user.company.bs}")
+                    websiteTv.setText(user.website)
                 }
             }
         }
