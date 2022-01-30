@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.usersgetapi.databinding.FragmentUserBinding
 import com.example.usersgetapi.model.network.ApiManager
 import com.example.usersgetapi.model.repository.UserRepository
 import com.example.usersgetapi.viewmodel.UsersViewModel
+import com.example.usersgetapi.adapters.UserAdapter
 
 class UserFragment:  Fragment(){
     private var _binding: FragmentUserBinding? = null
@@ -32,11 +34,14 @@ class UserFragment:  Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.users.observe(viewLifecycleOwner) {
-            binding.testTv.text = it.toString()
-        }
-
         with(binding){
+            viewModel.users.observe(viewLifecycleOwner){user ->
+                userRv.apply {
+                    adapter = user?.let { UserAdapter(it) }
+                    layoutManager =
+                        LinearLayoutManager(requireContext())
+                }
+            }
             backBtn.setOnClickListener {
                 val directions =
                     UserFragmentDirections.actionUserFragmentToWelcomeFragment()

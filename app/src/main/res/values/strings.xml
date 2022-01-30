@@ -3,4 +3,5 @@
     <string name="welcome_tv_text">Welcome</string>
     <string name="continue_btn_text">Continue</string>
     <string name="back_btn_text">Back</string>
+    <string name="users_tv_text">Users</string>
 </resources>
