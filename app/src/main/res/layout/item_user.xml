@@ -17,8 +17,7 @@
         app:layout_constraintBottom_toTopOf="@id/usernameTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="1. Jeremy Black"
-        app:layout_constraintVertical_chainStyle="packed"/>
+        tools:text="1. Jeremy Black"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/usernameTv"
