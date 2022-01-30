@@ -31,13 +31,13 @@ class UserAdapter(
         @SuppressLint("SetTextI18n")
         fun bind(user: User) {
                 with(binding){
-                    nameTv.setText("${user.id} ${user.name}")
-                    emailTv.setText(user.email)
-                    usernameTv.setText(user.username)
-                    addressTv.setText("${user.address.street} ${user.address.suite} ${user.address.city} ${user.address.zipcode} ${user.address.geo.lat} ${user.address.geo.lng}")
-                    phoneTv.setText(user.phone)
-                    companyTv.setText("${user.company.name} ${user.company.catchPhrase} ${user.company.bs}")
-                    websiteTv.setText(user.website)
+                    nameTv.text = "${user.id}: ${user.name}"
+                    emailTv.text = user.email
+                    usernameTv.text = user.username
+                    addressTv.text = "${user.address.street} ${user.address.suite} ${user.address.city} ${user.address.zipcode} ${user.address.geo.lat} ${user.address.geo.lng}"
+                    phoneTv.text = user.phone
+                    companyTv.text = "${user.company.name} ${user.company.catchPhrase} ${user.company.bs}"
+                    websiteTv.text = user.website
                 }
             }
         }
