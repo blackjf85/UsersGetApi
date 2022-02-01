@@ -30,6 +30,12 @@ class WelcomeFragment: Fragment() {
                     WelcomeFragmentDirections.actionWelcomeFragmentToUserFragment()
                 findNavController().navigate(directions)
             }
+
+            postBtn.setOnClickListener {
+                val directions =
+                    WelcomeFragmentDirections.actionWelcomeFragmentToPostFragment()
+                findNavController().navigate(directions)
+            }
         }
     }
 

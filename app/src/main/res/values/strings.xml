@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">UsersGetApi</string>
     <string name="welcome_tv_text">Welcome</string>
-    <string name="continue_btn_text">Continue</string>
+    <string name="continue_btn_text">Users</string>
     <string name="back_btn_text">Back</string>
     <string name="users_tv_text">Users</string>
+    <string name="posts_tv_text">Posts</string>
+    <string name="post_btn_text">Posts</string>
 </resources>

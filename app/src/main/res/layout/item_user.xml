@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="300dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="20dp">
 
@@ -17,7 +17,8 @@
         app:layout_constraintBottom_toTopOf="@id/usernameTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="1. Jeremy Black"/>
+        tools:text="1. Jeremy Black"
+        app:layout_constraintVertical_chainStyle="packed"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/usernameTv"
